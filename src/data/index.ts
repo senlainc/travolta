@@ -87,7 +87,7 @@ function writeSearch(data: SearchParams) {
 }
 
 function readSearch(): SearchParams {
-  return deserializeSearch(JSON.parse(localStorage.getItem('search') || ''));
+  return deserializeSearch(JSON.parse(''+localStorage.getItem('search')) ||{});
 }
 
 export {
